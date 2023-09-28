@@ -30,6 +30,9 @@ function addTodo(e) {
     };
     addTodoInput.value = '';
 
+    // Se invio un todo vuoto non lo inserisco
+    if(newTodo.text == '') return false;
+
     // Inserisco i nuovi dati nel database
     tasks.push(newTodo);
     renderTodo(newTodo);
